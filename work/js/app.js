@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-	fetch('../data/product.json')
+	fetch('./data/product.json')
 		.then(response => response.json())
 		.then(products => {
 			const productTable = document.getElementById('productTable');
@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", function(){
         createRow.appendChild(descriptionCell);
 				productTable.appendChild(createRow);
 			}
-})
-.catch(error => console.error("エラー：", error));
+		})
+		.catch(error => console.error("エラー：", error));
 });
